@@ -1,5 +1,5 @@
 {% set name = "nbproject" %}
-{% set version = "0.10.1" %}
+{% set version = "0.10.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nbproject-{{ version }}.tar.gz
-  sha256: a56ad4e363154579af4f6491a121a380cad8e617bbcb31471ae214dfd7815a82
+  sha256: 57d8d928180e11fe2100d0278c8626d6de4b177569b6d1c0f0049f88f8aff420
 
 build:
   entry_points:
     - nbproject = nbproject.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
