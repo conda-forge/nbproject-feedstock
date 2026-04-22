@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nbproject-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nbproject-{{ version }}.tar.gz
   sha256: a56ad4e363154579af4f6491a121a380cad8e617bbcb31471ae214dfd7815a82
 
 build:
   entry_points:
     - nbproject = nbproject.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
